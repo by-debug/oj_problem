@@ -13,14 +13,7 @@ using namespace std;
 #define int long long
 #define ld long double
 
-#ifdef ONLINE_JUDGE
-	#define settings() ios::sync_with_stdio(0);cin.tie(0)
-#elif defined(sublime)
-	#include <cstdio>
-	#define settings() freopen("file.in","r",stdin) // Because Sublime Text doesn't support input from terminal.
-#else
-	#define settings()
-#endif
+#define settings() ios::sync_with_stdio(0);cin.tie(0)
 
 #define INF INT64_MAX/100
 #define all(x) x.begin(),x.end()
@@ -66,7 +59,7 @@ void dfs(int x,int level)
 		return;
 	link[level]=x;
 	lev[x]=level;
-	for (int i=0;(1<<i)<level;++i)
+	for (int i=0;(1<<i)<=level;++i)
 		P[x][i]=link[level-(1<<i)];
 	for (auto i:G[x])
 		dfs(i,level+1);
@@ -75,14 +68,14 @@ void dfs(int x,int level)
 
 int find_ancestor(int x,int count)
 {
-	if(count = 0)
+	if(count <= 0)
 	{
 		return x;
 	}
 	else
 	{
-		int c = 1;
-		while ((1<<(c+1))<count)
+		int c = 0;
+		while ((1<<(c+1))<=count)
 			++c;
 		return find_ancestor(P[x][c],count-(1<<c));
 	}
@@ -94,6 +87,8 @@ int lca(int a,int b)
 		swap(a,b);
 	int a1 = find_ancestor(a,lev[a]-lev[b]);
 	int l=0,r=lev[a1];
+	if (a1 == b)
+		return a1;
 	while (l!=r)
 	{
 		int m = l+(r-l)/2;
@@ -131,10 +126,10 @@ signed main()
 		if (k<lev[s]-lev[L])
 			ans = find_ancestor(s,k);
 		else if (lev[s]+lev[t]-2*lev[L]>=k)
-			ans = find_ancestor(s,lev[s]+lev[t]-2*lev[L]-k);
+			ans = find_ancestor(t,lev[s]+lev[t]-2*lev[L]-k);
 		else
-			ans = -1;
+			ans = -2;
+		cout << ans+1 << '\n';
 	}
-	cout << ans << '\n';
 	return 0;
 }
