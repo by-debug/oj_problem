@@ -86,18 +86,17 @@ int lca(int a,int b)
 	if (lev[a]<lev[b])
 		swap(a,b);
 	int a1 = find_ancestor(a,lev[a]-lev[b]);
-	int l=0,r=lev[a1];
 	if (a1 == b)
 		return a1;
-	while (l!=r)
+	for (int i=P[a1].size()-1;i>=0;--i)
 	{
-		int m = l+(r-l)/2;
-		if (find_ancestor(a1,m)==find_ancestor(b,m))
-			l = m;
-		else
-			r = m;
+		if (P[a1][i]!=P[b][i])
+		{
+			a1 = P[a1][i];
+			b = P[b][i];
+		}
 	}
-	return l;
+	return P[a1][0];
 }
 
 signed main()
