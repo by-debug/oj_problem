@@ -5,3 +5,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 - ZJ a001
 - TIOJ 1687
+
+### 解題中
+
+- TIOJ 1840
