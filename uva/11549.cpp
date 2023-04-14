@@ -60,23 +60,24 @@ int square(int x,int n)
 {
     int ret = x*x;
     stack<int> st;
-    while (x>0)
+    while (ret>0)
     {
-        st.push(x%10);
-        x/=10;
+        st.push(ret%10);
+        ret/=10;
     }
     int i=0;
-    x = 0;
+    ret = 0;
     while (!st.empty())
     {
         if (i<n)
         {
-            x *= 10;
-            x += st.top();
+            ret *= 10;
+            ret += st.top();
         }
         ++i;
+        st.pop();
     }
-    return x;
+    return ret;
 }
 
 int t,n,k,maxn;
