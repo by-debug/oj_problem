@@ -1,1 +1,5 @@
-.vscode/
+!*.c
+!*.cpp
+!*.py
+!.md
+!.gitignore
