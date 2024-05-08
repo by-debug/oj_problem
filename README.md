@@ -6,6 +6,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 - ZJ a001
 - TIOJ 1687
 - Uva 11549
+- ZJ e406
 
 ### 解題中
 
