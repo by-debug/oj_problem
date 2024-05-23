@@ -1,14 +1,28 @@
 # oj_problem
-A repo for me to store my own code solving problems on OJ such as Codeforces, AtCoder, TIOJ etc. 
+A repo for me to store my own code solving problems on OJ such as Codeforces, AtCoder, TIOJ, Zerojudge etc. 
 
 ### 已AC題目
 
-- ZJ a001
-- TIOJ 1687
-- Uva 11549
-- ZJ e406
+#### ZJ
+
+- a001
+- e406
+
+#### TIOJ
+
+- 1080
+- 1687
+
+#### UVA
+
+- 11549
 
 ### 解題中
 
-- TIOJ 1840
-- Zj a331
+#### ZJ
+
+- a331
+
+#### TIOJ
+
+- 1840
