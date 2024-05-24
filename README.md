@@ -16,6 +16,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 #### UVA
 
+- 10305
 - 11549
 
 ### 解題中
