@@ -7,6 +7,7 @@
 #include <queue>
 #include <map>
 #include <set>
+#include <cstdint>
 
 using namespace std;
 
