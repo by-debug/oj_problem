@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdint>
 #include <cstring>
 #include <algorithm>
 #include <iomanip>
@@ -57,7 +58,7 @@ using namespace std;
 const double eps = 1e-9;
 
 int m,n, nmax, sum;
-vi a;
+int a;
 
 signed main()
 {
@@ -66,8 +67,17 @@ signed main()
     while (m--)
     {
         cin >> n;
-        nmax = 0;
+        nmax = - INF;
         sum = 0;
+        while (n--)
+        {
+            cin >> a;
+            sum += a;
+            nmax = max(nmax, sum);
+            if (sum <= 0)
+                sum = 0;
+        }
+        cout << nmax << '\n';
     }
 	return 0;
 }

@@ -6,6 +6,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 #### ZJ
 
 - a001
+- d784
 - e406
 
 #### TIOJ
@@ -24,7 +25,6 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 #### ZJ
 
 - a331
-- d784
 
 #### TIOJ
 
