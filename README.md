@@ -6,6 +6,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 #### ZJ
 
 - a001
+- d667
 - d784
 - e406
 - e603
@@ -18,6 +19,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 #### UVA
 
+- 00820
 - 10104
 - 10305
 - 11549
