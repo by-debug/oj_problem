@@ -34,3 +34,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 #### TIOJ
 
 - 1840
+
+#### UVA
+
+- 10080
