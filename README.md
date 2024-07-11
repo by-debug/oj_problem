@@ -20,6 +20,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 #### UVA
 
 - 00820
+- 10080
 - 10104
 - 10305
 - 11549
@@ -35,6 +36,3 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 - 1840
 
-#### UVA
-
-- 10080
