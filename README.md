@@ -36,3 +36,6 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 - 1840
 
+#### CSES
+
+- Grid Paths
