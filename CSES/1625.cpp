@@ -56,22 +56,52 @@ using namespace std;
 #define setpoint(x) fixed << setprecision(x)
 const double eps = 1e-9;
 
-struct state
-{
-    int _u,_d,_l,_r,_t;
-    state(int u = 0,int d = 0, int l = 0, int r = 0, int t = 0):_u(u),_d(d),_l(l),_r(r),_t(t){};
-};
-
-queue<state> q;
 int ans=0;
+bool visited[7][7];
+string s;
+
+void dfs(int x,int y,int level)
+{
+    if (x < 0 || x >= 7 || y < 0 || y >= 7)
+        return;
+    if (visited[x][y])
+        return;
+    if (x == 0 && y == 6)
+    {
+        if (level == 48)
+            ++ans;
+        return;
+    }
+    visited[x][y] = 1;
+    switch(s[level])
+    {
+        case 'U':
+            dfs(x, y-1, level+1);
+            break;
+        case 'D':
+            dfs(x, y+1, level+1);
+            break;
+        case 'L':
+            dfs(x-1, y, level+1);
+            break;
+        case 'R':
+            dfs(x+1, y, level+1);
+            break;
+        case '?':
+            dfs(x, y-1, level+1);
+            dfs(x, y+1, level+1);
+            dfs(x-1, y, level+1);
+            dfs(x+1, y, level+1);
+            break;
+    }
+    visited[x][y] = 0;
+}
 
 signed main()
 {
 	settings();
-    string s;
     cin >> s;
-    for (auto c:s)
-    {
-    }
+    dfs(0, 0, 0);
+    cout << ans << '\n';
 	return 0;
 }
