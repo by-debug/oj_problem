@@ -40,6 +40,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 #### LeetCode
 
 - 869
+- 2438
 
 ### 解題中
 
