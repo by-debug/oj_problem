@@ -41,6 +41,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 - 869
 - 2438
+- 2787
 
 ### 解題中
 
