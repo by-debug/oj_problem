@@ -39,6 +39,7 @@ A repo for me to store my own code solving problems on OJ such as Codeforces, At
 
 #### LeetCode
 
+- 342
 - 869
 - 2264
 - 2438
